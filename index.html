@@ -338,6 +338,42 @@
 #categorias button:hover{
     background:#333;
 }
+
+    #modal-producto{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+    z-index:2000;
+}
+
+#contenido-producto{
+    background:white;
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+    border-radius:15px;
+    position:relative;
+}
+
+#cerrar-producto{
+    position:absolute;
+    top:15px;
+    right:20px;
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+#detalle-producto{
+    margin-top:20px;
+}
+
     </style>
 
 </head>
@@ -386,7 +422,9 @@
         id="buscador"
         placeholder="🔍 Buscar producto..."
     >
-
+<button onclick="abrirProducto()">
+    Probar Modal Producto
+</button>
     <div id="categorias">
 
         <button onclick="filtrarCategoria('Todos')">
@@ -991,7 +1029,21 @@ function cerrarConfirmacion(){
     renderizarProductos(productos);
 
 }
+function abrirProducto(){
 
+    document.getElementById(
+        'modal-producto'
+    ).style.display = 'block';
+
+}
+
+function cerrarProducto(){
+
+    document.getElementById(
+        'modal-producto'
+    ).style.display = 'none';
+
+}
 function actualizarCarrito(){
 
     let html = '';
@@ -1100,6 +1152,27 @@ document.getElementById('buscador')
 </div>
 
         <div id="contenido-dinamico"></div>
+
+    </div>
+
+</div>
+    <!-- Modal del Producto -->
+
+<div id="modal-producto">
+
+    <div id="contenido-producto">
+
+        <button
+            id="cerrar-producto"
+            onclick="cerrarProducto()">
+
+            ✕
+
+        </button>
+
+        <div id="detalle-producto">
+
+        </div>
 
     </div>
 
