@@ -5,7 +5,10 @@
     "precio":250,
     "categoria": "Playeras",
     "tallas":"M,L,XL",
-    "imagen":"imagenes/playera-negra.jpg"
+   "imagenes":["imagenes/playera-negra.jpg",
+     "imagenes/playera-negra.jpg",
+     "imagenes/playera-negra.jpg"
+   ]
   },
   {
     "sku":"P002",
@@ -13,7 +16,10 @@
     "precio":550,
     "categoria": "Chamarra",
     "tallas":"M,L",
-    "imagen":"imagenes/Chamarra verde.jpg"
+    "imagenes":["imagenes/Chamarra verde.jpg",
+      "imagenes/Chamarra verde.jpg",
+      "imagenes/Chamarra verde.jpg"
+    ]
   },
   {
     "sku":"P003",
@@ -21,6 +27,10 @@
     "precio":650,
     "categoria": "Vestidos",
     "tallas":"S,M,L",
-    "imagen":"imagenes/vestido rojo.jpg"
+     "imagenes":[
+      "imagenes/vestido rojo.jpg",
+      "imagenes/vestido rojo2.jpg",
+      "imagenes/vestido roljo 3.jpg"
+  ]
   }
 ]
