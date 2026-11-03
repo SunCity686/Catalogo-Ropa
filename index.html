@@ -724,6 +724,10 @@ const clienteGuardado =
 }
 function continuarPedido(){
 
+    document.getElementById(
+        'opciones-cliente'
+    ).style.display = 'none';
+
     document.getElementById('contenido-dinamico').innerHTML = `
 
         <hr>
@@ -933,6 +937,10 @@ function cerrarConfirmacion(){
     document.getElementById('panel-carrito')
         .classList.remove('abierto');
 
+    document.getElementById(
+        'opciones-cliente'
+    ).style.display = 'block';
+
 }
     function filtrarCategoria(categoria){
 
@@ -1061,13 +1069,17 @@ document.getElementById('buscador')
  <p>
         Selecciona una opción para continuar:
     </p>
-        <button onclick="soyCliente()">
-            ✅ Ya soy cliente
-        </button>
+        <div id="opciones-cliente">
 
-        <button onclick="clienteNuevo()">
-            🆕 Soy cliente nuevo
-        </button>
+    <button onclick="soyCliente()">
+        ✅ Ya soy cliente
+    </button>
+
+    <button onclick="clienteNuevo()">
+        🆕 Soy cliente nuevo
+    </button>
+
+</div>
 
         <div id="contenido-dinamico"></div>
 
