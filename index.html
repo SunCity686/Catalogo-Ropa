@@ -485,9 +485,11 @@ function renderizarProductos(productos){
     productos.forEach(producto => {
 
         html += `
-        <div class="card">
+        <div class="card"
+     onclick="verProducto('${producto.sku}')">
 
-            <img src="${producto.imagen}" alt="${producto.nombre}">
+
+            <img src="${producto.imagenes[0]}" alt="${producto.nombre}">
 
             <div class="info">
 
@@ -503,7 +505,7 @@ function renderizarProductos(productos){
 
                 <button
                     class="btn-carrito"
-                    onclick="agregarCarrito('${producto.sku}')">
+                    onclick="event.stopPropagation(); agregarCarrito('${producto.sku}')"
 
                     🛒 Agregar al carrito
 
@@ -519,7 +521,70 @@ function renderizarProductos(productos){
     document.getElementById('catalogo').innerHTML = html;
 
 }
+function verProducto(sku){
 
+    const producto =
+        productosGlobal.find(
+            p => p.sku === sku
+        );
+
+    document.getElementById(
+        'modal-producto'
+    ).style.display = 'block';
+
+    document.getElementById(
+        'detalle-producto'
+    ).innerHTML = `
+
+        <div style="
+            display:flex;
+            gap:30px;
+        ">
+
+            <div style="flex:1;">
+
+                <img
+                    src="${producto.imagenes[0]}"
+                    style="
+                        width:100%;
+                        max-height:500px;
+                        object-fit:cover;
+                    "
+                >
+
+            </div>
+
+            <div style="flex:1;">
+
+                <h2>${producto.nombre}</h2>
+
+                <h3 style="color:green;">
+                    $${producto.precio}
+                </h3>
+
+                <p>
+                    Tallas: ${producto.tallas}
+                </p>
+
+                <p>
+                    ${producto.descripcion}
+                </p>
+
+                <button
+                    class="btn-carrito"
+                    onclick="agregarCarrito('${producto.sku}')">
+
+                    🛒 Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
 function agregarCarrito(sku){
 
     const producto =
