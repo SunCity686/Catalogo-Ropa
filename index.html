@@ -1035,8 +1035,55 @@ function abrirProducto(){
         'modal-producto'
     ).style.display = 'block';
 
-}
+    document.getElementById(
+        'detalle-producto'
+    ).innerHTML = `
 
+        <div style="display:flex;gap:30px;">
+
+            <div style="flex:1;">
+
+                <img
+                    src="imagenes/vestido-rojo.jpg"
+                    style="
+                        width:100%;
+                        max-height:500px;
+                        object-fit:cover;
+                    "
+                >
+
+            </div>
+
+            <div style="flex:1;">
+
+                <h2>Vestido Rojo</h2>
+
+                <h3 style="color:green;">
+                    $650
+                </h3>
+
+                <p>
+                    Tallas: S, M, L
+                </p>
+
+                <p>
+                    Vestido elegante para eventos y
+                    ocasiones especiales.
+                </p>
+
+                <button>
+
+                    🛒 Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
 function cerrarProducto(){
 
     document.getElementById(
