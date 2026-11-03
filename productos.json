@@ -5,6 +5,7 @@
     "precio":250,
     "categoria": "Playeras",
     "tallas":"M,L,XL",
+    "descripcion":"Vestido elegante ideal para eventos y ocasiones especiales.",
    "imagenes":["imagenes/playera-negra.jpg",
      "imagenes/playera-negra.jpg",
      "imagenes/playera-negra.jpg"
@@ -16,6 +17,7 @@
     "precio":550,
     "categoria": "Chamarra",
     "tallas":"M,L",
+    "descripcion":"Vestido elegante ideal para eventos y ocasiones especiales.",
     "imagenes":["imagenes/Chamarra verde.jpg",
       "imagenes/Chamarra verde.jpg",
       "imagenes/Chamarra verde.jpg"
@@ -27,6 +29,7 @@
     "precio":650,
     "categoria": "Vestidos",
     "tallas":"S,M,L",
+    "descripcion":"Vestido elegante ideal para eventos y ocasiones especiales.",
      "imagenes":[
       "imagenes/vestido rojo.jpg",
       "imagenes/vestido rojo2.jpg",
