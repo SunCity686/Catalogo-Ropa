@@ -534,8 +534,19 @@ function abrirFormularioCliente(){
 }
 function cerrarModalCliente(){
 
-    document.getElementById('modal-cliente').style.display =
-    'none';
+    document.getElementById('modal-cliente')
+        .style.display = 'none';
+
+    document.getElementById('contenido-dinamico')
+        .innerHTML = '';
+
+    document.getElementById(
+        'opciones-cliente'
+    ).style.display = 'block';
+    
+    document.getElementById(
+    'mensaje-cliente'
+).style.display = 'block';
 
 }
     function clienteNuevo(){
@@ -727,6 +738,9 @@ function continuarPedido(){
     document.getElementById(
         'opciones-cliente'
     ).style.display = 'none';
+    document.getElementById(
+    'mensaje-cliente'
+).style.display = 'none';
 
     document.getElementById('contenido-dinamico').innerHTML = `
 
@@ -1066,9 +1080,13 @@ document.getElementById('buscador')
     </button>
 
 </div>
- <p>
+ <div id="mensaje-cliente">
+
+    <p>
         Selecciona una opción para continuar:
     </p>
+
+</div>
         <div id="opciones-cliente">
 
     <button onclick="soyCliente()">
