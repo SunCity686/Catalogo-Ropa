@@ -1258,10 +1258,8 @@ function actualizarCarrito(){
     document.getElementById('total-carrito').innerText =
         'Total: $' + total;
     
-        const btnFinalizar =
-    document.getElementById('btn-finalizar');
-    console.log(carrito.length);
-console.log(btnFinalizar);
+ const btnFinalizar =
+document.getElementById('btn-finalizar');
 
 if(carrito.length === 0){
 
@@ -1272,6 +1270,9 @@ if(carrito.length === 0){
     btnFinalizar.disabled = false;
 
 }
+
+console.log("Carrito:", carrito.length);
+console.log("Disabled:", btnFinalizar.disabled);
 
 }
 
