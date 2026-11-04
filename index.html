@@ -1237,13 +1237,26 @@ function actualizarCarrito(){
 
 </div>
 `;
-        });
+    
+    } );
 
     document.getElementById('lista-carrito').innerHTML =
         html;
 
     document.getElementById('total-carrito').innerText =
         'Total: $' + total;
+        const btnFinalizar =
+    document.getElementById('btn-finalizar');
+
+if(carrito.length === 0){
+
+    btnFinalizar.disabled = true;
+
+}else{
+
+    btnFinalizar.disabled = false;
+
+}
 
 }
 
@@ -1271,8 +1284,12 @@ document.getElementById('buscador')
         Total: $0
     </h3>
 
- <button id="btn-finalizar" onclick="abrirFormularioCliente()">
+ <button
+    id="btn-finalizar"
+    onclick="abrirFormularioCliente()">
+
     Finalizar Pedido
+
 </button>
 
 </div>
