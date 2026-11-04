@@ -373,6 +373,18 @@
 #detalle-producto{
     margin-top:20px;
 }
+        #btn-finalizar:disabled{
+
+    background: #cccccc !important;
+
+    color: #666666;
+
+    cursor: not-allowed;
+
+    opacity: 0.7;
+
+}
+
 
     </style>
 
@@ -1245,8 +1257,11 @@ function actualizarCarrito(){
 
     document.getElementById('total-carrito').innerText =
         'Total: $' + total;
+    
         const btnFinalizar =
     document.getElementById('btn-finalizar');
+    console.log(carrito.length);
+console.log(btnFinalizar);
 
 if(carrito.length === 0){
 
