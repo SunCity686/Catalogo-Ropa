@@ -376,15 +376,11 @@
         #btn-finalizar:disabled{
 
     background: #cccccc !important;
-
     color: #666666;
-
     cursor: not-allowed;
-
     opacity: 0.7;
 
 }
-
 
     </style>
 
@@ -1278,7 +1274,13 @@ console.log("Disabled:", btnFinalizar.disabled);
 
 document.getElementById('buscador')
     .addEventListener('input', aplicarFiltros);
-actualizarCarrito();
+window.onload = function(){
+
+    actualizarCarrito();
+
+    console.log("Se ejecutó actualizarCarrito al cargar");
+
+};
     
 </script>
 <div id="panel-carrito">
